@@ -1,0 +1,23 @@
+{
+  "name": "draw-on-canvas-react",
+  "version": "0.0.0",
+  "description": "react module for draw-on-canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkropfhamer/draw-on-canvas-react.git"
+  },
+  "keywords": [
+    "react",
+    "canvas"
+  ],
+  "author": "fkropfhamer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fkropfhamer/draw-on-canvas-react/issues"
+  },
+  "homepage": "https://github.com/fkropfhamer/draw-on-canvas-react#readme"
+}
