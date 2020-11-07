@@ -7,7 +7,6 @@
     "test": "jest",
     "build": "babel src --out-dir dist",
     "watch": "babel src --watch --out-dir dist"
-
   },
   "peerDependencies": {
     "react": "^17.0.1",
@@ -31,5 +30,8 @@
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-react": "^7.12.1"
+  },
+  "dependencies": {
+    "draw-on-canvas": "^1.0.0"
   }
 }

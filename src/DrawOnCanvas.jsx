@@ -1,17 +1,17 @@
 import React, { useRef, useEffect } from 'react';
+import Draw from 'draw-on-canvas';
 
-export default function DrawOnCanvas() {
-    const canvasRef = useRef(null);
+
+export default function DrawOnCanvas(props) {
+    const ref = useRef(null);
+    const { width, height, backgroundColor, strokeColor, strokeWeight, drawReference } = props;
     
     useEffect(() => {
-        const canvas = canvasRef.current
-        const context = canvas.getContext('2d')
-        //Our first draw
-        context.fillStyle = '#000000'
-        context.fillRect(0, 0, context.canvas.width / 2, context.canvas.height / 2)
+        const draw = new Draw(ref.current, width, height, { backgroundColor, strokeColor, strokeWeight })
+        drawReference.current = draw;
       }, [])
 
     return (
-        <canvas ref={canvasRef} style={{backgroundColor: 'green'}}/>
+        <div ref={ref} />
     );
 }
