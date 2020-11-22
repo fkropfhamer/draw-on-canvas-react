@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir dist",
-    "watch": "babel src --watch --out-dir dist"
+    "watch": "babel src --watch --out-dir dist",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^17.0.1",
