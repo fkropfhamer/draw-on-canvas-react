@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import Draw from 'draw-on-canvas';
 
 
