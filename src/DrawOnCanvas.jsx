@@ -1,17 +1,29 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, Component } from 'react';
 import Draw from 'draw-on-canvas';
 
 
-export default function DrawOnCanvas(props) {
-    const ref = useRef(null);
-    const { width, height, backgroundColor, strokeColor, strokeWeight, drawReference } = props;
-    
-    useEffect(() => {
-        const draw = new Draw(ref.current, width, height, { backgroundColor, strokeColor, strokeWeight })
-        drawReference.current = draw;
-      }, [])
+export default class DrawOnCanvas extends Component {
+    constructor(props) {
+        super(props);
 
-    return (
-        <div ref={ref} />
-    );
+        this.div = null;
+
+        this.setDivRef = element => {
+            this.div = element;
+        };
+    }
+
+    componentDidMount() {
+        const { width, height, backgroundColor, strokeColor, strokeWeight} = this.props;
+
+        this.draw = new Draw(this.div, width, height, { backgroundColor, strokeColor, strokeWeight })
+    }
+
+    changeStrokeColor(color) {
+        this.draw.changeStrokeColor(color)
+    } 
+
+    render() {
+        return <div ref={this.setDivRef} />
+    };
 }
