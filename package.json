@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "react module for draw-on-canvas",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
