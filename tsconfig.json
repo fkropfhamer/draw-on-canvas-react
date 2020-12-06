@@ -8,6 +8,6 @@
       "jsx": "react",
       "esModuleInterop": true
     },
-    "include": ["src/index.ts", "decs.d.ts"],
+    "include": ["src/index.ts"],
     "exclude": ["node_modules", "**/__tests__/*"]
 }

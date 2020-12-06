@@ -26,8 +26,10 @@ export default class DrawOnCanvas extends Component<Props> {
 
     componentDidMount() {
         const { width, height, backgroundColor, strokeColor, strokeWeight} = this.props;
-
-        this.draw = new Draw(this.div, width, height, { backgroundColor, strokeColor, strokeWeight })
+        
+        if(this.div) {
+            this.draw = new Draw(this.div, width, height, { backgroundColor, strokeColor, strokeWeight })
+        }
     }
 
     changeStrokeColor(color: string) {
