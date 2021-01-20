@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Draw from 'draw-on-canvas';
 
 interface Props {
-    width: number,
-    height: number,
-    backgroundColor: string,
-    strokeColor: string,
-    strokeWeight: number,
+    width?: number,
+    height?: number,
+    backgroundColor?: string,
+    strokeColor?: string,
+    strokeWeight?: number,
 }
 
 export default class DrawOnCanvas extends Component<Props> {
@@ -25,7 +25,7 @@ export default class DrawOnCanvas extends Component<Props> {
     }
 
     componentDidMount() {
-        const { width, height, backgroundColor, strokeColor, strokeWeight} = this.props;
+        const { width = 500, height = 500, backgroundColor, strokeColor, strokeWeight} = this.props;
         
         if(this.div) {
             this.draw = new Draw(this.div, width, height, { backgroundColor, strokeColor, strokeWeight })
